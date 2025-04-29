@@ -3,6 +3,7 @@ Retrieval Augmented Language Models:
 TF-IDF-sparse retrieval- score functiion and query function to score for query overlaps (i.e, words that do or do not occur among source queries)
 
 ### Retrival methods
+Ref: https://www.youtube.com/watch?v=mE7IDf2SmJg
 ##  sparse retrival 
 DrQA: uses sparse retrival to return non-repeating & vast word vectors trained using LSTM.
 ## Dense retrival

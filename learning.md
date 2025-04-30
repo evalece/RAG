@@ -1,4 +1,4 @@
-### April 28- Project Prep
+# April 28- Project Prep
 Retrieval Augmented Language Models:
 TF-IDF-sparse retrieval- score functiion and query function to score for query overlaps (i.e, words that do or do not occur among source queries)
 
@@ -20,13 +20,13 @@ goal: to compute similarities of words
 - hybrid: sparse <-> dense
 
 
-#In context Ralm
+# In context Ralm
 
 
-### April 29- evolution of Transformer Model 
+# April 29- evolution of Transformer Model 
 Standford CS224N lecture 7: https://www.youtube.com/watch?v=wzfWHP6SXxY
 
-# Neural Translation Model to Attention (self attention & transformer models)
+## Neural Translation Model to Attention (self attention & transformer models)
 - Starting from parallel text & stat model regression optimization: components are broken down into smaller chunks that sees higher probabilities of matching, the arrangement of words is considered "encoding" and "decoding"
 - In nueral MT, encodes each word using RNN, last encoding state become input of decoding state.
 - Use Beam Search instead of greedy in training.

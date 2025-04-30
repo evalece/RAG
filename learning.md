@@ -32,3 +32,10 @@ Standford CS224N lecture 7: https://www.youtube.com/watch?v=wzfWHP6SXxY
 - Use Beam Search instead of greedy in training.
 - RNN: still hard to optimize, each state depends on prior state(s), hence, attention comes in:
 - Attention in neural MT (RNN): decoder computes "similarity" score from each encoder state into attention score. 
+
+# April 30- Self-Attention into Transformer
+
+Standford CS224N lecture 8:
+- Encode position allowes replacement of RNN while allowing parallel computation in feed-forward deep neural network training.
+- In training, mask future words for prediction.
+  

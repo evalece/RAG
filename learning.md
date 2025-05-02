@@ -53,8 +53,16 @@ https://www.youtube.com/watch?v=LWMzyfvuehA&t=4464s
 - Softmax [(XQ(XK)^(T))] (XV) -> normalize values
 
 # May 02- Continue on RAG 
+- Frozen RAG: use vector databases, retrival ranks and word embeddings to retrieve relevant info. 
 - Stanford CS25: V3 I Retrieval Augmented Language Models at https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s 
 - Research shows positive results with higher efficiency in Query encoding. Other options are document encoding (expansive), ranking of retrival) etc. 
 - LLM models less likely aware of RAG implementation while generating. Exception inclduiing Retro (Borgeaud et al 2022).
 Advance topics:
-- Model decides when to do additional retrival to call RAG. 
+- Model decides when to do additional retrival to call RAG. (i.e, Flare approach, GPT: web search)
+- Observation: frozen RAG: document retrival order impacts response correctness.
+- Self-RAG (Asai et al 2023): self critize in retrived info.
+- Advanced fronzen RAG tools
+    1. Zero shot LLM to retrive relevant info (via dense retrival/ similar word embeddings)
+    2. HyDE: embed query and pre-config solutions in search docs (Gao, Ma et al 2022)
+    3. Hybrid search: sparse + dense with reciprocal rank
+    4. Child-Parent: Search from small to large info 

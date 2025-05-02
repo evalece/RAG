@@ -23,7 +23,7 @@ goal: to compute similarities of words
 # In context Ralm
 
 
-# April 29- evolution of Transformer Model 
+# April 29- Evolution of Transformer Model 
 Standford CS224N lecture 7: https://www.youtube.com/watch?v=wzfWHP6SXxY
 
 ## Neural Translation Model to Attention (self attention & transformer models)
@@ -52,3 +52,9 @@ https://www.youtube.com/watch?v=LWMzyfvuehA&t=4464s
 - self attention of word i on word j for j in (1...n) is XQ(XK)^(T)= attention scores, this is a n by n vectore 
 - Softmax [(XQ(XK)^(T))] (XV) -> normalize values
 
+# May 02- Continue on RAG 
+- Stanford CS25: V3 I Retrieval Augmented Language Models at https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s 
+- Research shows positive results with higher efficiency in Query encoding. Other options are document encoding (expansive), ranking of retrival) etc. 
+- LLM models less likely aware of RAG implementation while generating. Exception inclduiing Retro (Borgeaud et al 2022).
+Advance topics:
+- Model decides when to do additional retrival to call RAG. 

@@ -65,4 +65,8 @@ Advance topics:
     1. Zero shot LLM to retrive relevant info (via dense retrival/ similar word embeddings)
     2. HyDE: embed query and pre-config solutions in search docs (Gao, Ma et al 2022)
     3. Hybrid search: sparse + dense with reciprocal rank
-    4. Child-Parent: Search from small to large info 
+    4. Child-Parent: Search from small to large info
+- Allow Embed related compuation in cache
+- Look into Multinodal RAG 1:08:29  https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s
+- Advantage: can choose light LLM (my thought: embedding not have to be the same)
+- Challenge: hard to evaluate quality 

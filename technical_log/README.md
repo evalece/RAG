@@ -70,3 +70,32 @@ Advance topics:
 - Look into Multinodal RAG 1:08:29  https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s
 - Advantage: can choose light LLM (my thought: embedding not have to be the same)
 - Challenge: hard to evaluate quality 
+
+
+# May 03- Summeraize on RAG 
+- Stanford CS25: V3 I Retrieval Augmented Language Models at https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s 
+- Incentive: 
+    1. LLM become unpredictive when needing to generate content with very few source document- Hallucianation problem (problematic outpuit with high model confidence), but model editing expansive 
+    2. Customized source document (i.e., RAG avoids editing model by semi parametric: no memorization on LLM with contents; non-parameteric); other options: semi- and parametric (Yogatama et al 2021)
+    3. semi parametric: versatile update of source doc by indexing from multiple retrivers
+    4. Grounding: LLM answers question iff doc gives evidence of such; source pointer feature 
+- RAG 
+    1. LLM generator, but contextualized 
+    2. Retriver: has query and document encoder
+    3. Hence, RAG and LLM become two trainable parts
+
+- Frozen RAG vs RAG:
+    1. forzen does not have train 
+
+
+# May 08- High Level On RAG + Agent 
+
+I chat with chatGPT after reading https://aws.amazon.com/what-is/langchain/. 
+
+  Summary: 
+  - Agents, as of now, LLMs, are more likely to be specially trained to question among multiple sources, to summarize, extract, compare etc. -- They basically "retrieve" useful information from a bunch of relevant informations, assume successfully retrieved. 
+  - RAGs, like a library full of updated information, is made available to agnets when an user input is recieved, and extra information is needed to generate better/ more accurate response. 
+
+  - Together, Agents need to know how to best use of the library, and wheres to search from. The generation can sometimes be evaluated by human, making it like a "multi-layer" debug: for example, if LLM is fixed, we change our search method, how well will generation perform? 
+  This still depends on fixed variable: the agent (LLM). 
+

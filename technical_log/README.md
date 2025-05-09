@@ -1,4 +1,6 @@
-# April 28- Project Prep
+# RAG Technical Logs, Learnings and Decisions
+
+## April 28- Project Prep
 Retrieval Augmented Language Models:
 TF-IDF-sparse retrieval- score functiion and query function to score for query overlaps (i.e, words that do or do not occur among source queries)
 
@@ -20,10 +22,10 @@ goal: to compute similarities of words
 - hybrid: sparse <-> dense
 
 
-# In context Ralm
+### In context Ralm
 
 
-# April 29- Evolution of Transformer Model 
+## April 29- Evolution of Transformer Model 
 Standford CS224N lecture 7: https://www.youtube.com/watch?v=wzfWHP6SXxY
 
 ## Neural Translation Model to Attention (self attention & transformer models)
@@ -33,14 +35,14 @@ Standford CS224N lecture 7: https://www.youtube.com/watch?v=wzfWHP6SXxY
 - RNN: still hard to optimize, each state depends on prior state(s), hence, attention comes in:
 - Attention in neural MT (RNN): decoder computes "similarity" score from each encoder state into attention score. 
 
-# April 30- Self-Attention into Transformer
+## April 30- Self-Attention into Transformer
 
 Standford CS224N lecture 8:
 - Encode position allowes replacement of RNN while allowing parallel computation in feed-forward deep neural network training.
 - In training, mask future words for prediction.
 
 
-# May 02- A Complete Transformer
+## May 02- A Complete Transformer
 - CS224N NLP Lecture 8 
 https://www.youtube.com/watch?v=LWMzyfvuehA&t=4464s
 - Cross Attention on encoder side: remove masking, cross attention passes keys and values from encoder to decoder. Decoder produces query on these trainable values+ attention weighted values (these are results of entire context attention weighted sum + viewing from each words, and can be multi-headed with batch  + summing function to sum batches up, see linear algebra notes in the following).
@@ -52,7 +54,7 @@ https://www.youtube.com/watch?v=LWMzyfvuehA&t=4464s
 - self attention of word i on word j for j in (1...n) is XQ(XK)^(T)= attention scores, this is a n by n vectore 
 - Softmax [(XQ(XK)^(T))] (XV) -> normalize values
 
-# May 02- Continue on RAG 
+## May 02- Continue on RAG 
 - Frozen RAG: use vector databases, retrival ranks and word embeddings to retrieve relevant info. 
 - Stanford CS25: V3 I Retrieval Augmented Language Models at https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s 
 - Research shows positive results with higher efficiency in Query encoding. Other options are document encoding (expansive), ranking of retrival) etc. 
@@ -72,7 +74,7 @@ Advance topics:
 - Challenge: hard to evaluate quality 
 
 
-# May 03- Summeraize on RAG 
+## May 03- Summeraize on RAG 
 - Stanford CS25: V3 I Retrieval Augmented Language Models at https://www.youtube.com/watch?v=mE7IDf2SmJg&t=3076s 
 - Incentive: 
     1. LLM become unpredictive when needing to generate content with very few source document- Hallucianation problem (problematic outpuit with high model confidence), but model editing expansive 
@@ -88,7 +90,7 @@ Advance topics:
     1. forzen does not have train 
 
 
-# May 08- High Level On RAG + Agent 
+## May 08- High Level On RAG + Agent 
 
 I chat with chatGPT after reading https://aws.amazon.com/what-is/langchain/. 
 

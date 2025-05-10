@@ -1,5 +1,12 @@
 # RAG Technical Logs, Learnings and Decisions
 
+### This project aims to implemnt retrieval of information as a trainable unit. In a transformer setting, input and queries/ or documents are processed in encoders where cross-attention helps identify the most relevant information. Decoders could be optimzed by training with cross-attention weights and weights on encoders as it generates output on masking. 
+
+### In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
+
+- Reference
+    [1]D. Bahdanau, K. Cho, and Y. Bengio, “Neural machine translation by jointly learning to align and translate,” arXiv.org, Sep. 01, 2014. https://arxiv.org/abs/1409.0473
+
 ## April 28- Project Prep
 Retrieval Augmented Language Models:
 TF-IDF-sparse retrieval- score functiion and query function to score for query overlaps (i.e, words that do or do not occur among source queries)

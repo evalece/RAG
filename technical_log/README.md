@@ -100,3 +100,16 @@ I chat with chatGPT after reading https://aws.amazon.com/what-is/langchain/.
   - Together, Agents need to know how to best use of the library, and wheres to search from. The generation can sometimes be evaluated by human, making it like a "multi-layer" debug: for example, if LLM is fixed, we change our search method, how well will generation perform? 
   This still depends on fixed variable: the agent (LLM). 
 
+
+## May 09- Kick Start on RAG
+
+https://dl.acm.org/doi/pdf/10.1145/3626772.3657834 
+
+- Flow: Query + Document chunk -> Encoding (Sparse or Dense; cross-attention) -> Attention Score to calculate top relevant Document -> Decoder (selected Doc on masking) [1]
+- Simplied version for now by excluding parts not included in initial RAG:
+    - Document chunk -> Encoding (Sparse or Dense; cross-attention) -> Attention Score to calculate top relevant Document
+    - *** For later, a fully encoder-decoder RAG should propogate decoder loss back to encoder for weight trainings, but I will leave this feature for later. 
+    
+
+- Reference 
+  [1] F. Cuconasu et al., “The Power of Noise: Redefining retrieval for RAG systems,” Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 719–729, Jul. 2024, doi: 10.1145/3626772.3657834.

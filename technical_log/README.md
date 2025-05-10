@@ -4,7 +4,7 @@
 
 ### In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
 
-- Reference
+## Reference
     [1]D. Bahdanau, K. Cho, and Y. Bengio, “Neural machine translation by jointly learning to align and translate,” arXiv.org, Sep. 01, 2014. https://arxiv.org/abs/1409.0473
 
 ## April 28- Project Prep

@@ -1,4 +1,4 @@
-### RAG
+# RAG
 
 This project is in-development, stay tune!
 

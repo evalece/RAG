@@ -120,3 +120,15 @@ I chat with chatGPT after reading https://aws.amazon.com/what-is/langchain/.
 
 - Reference 
   [1] F. Cuconasu et al., “The Power of Noise: Redefining retrieval for RAG systems,” Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 719–729, Jul. 2024, doi: 10.1145/3626772.3657834 https://dl.acm.org/doi/pdf/10.1145/3626772.3657834 .
+
+
+  # May 12: Setting RAG Benchmark tool (Debug of RAG)
+Tools 
+ - The Huggging Face
+ - Hotpotqa (Featuring multi-hob questions that would require multiple domain search)
+
+Description: AI-generated questions from various sources, see appendix 7.2: https://arxiv.org/pdf/2407.11005
+https://arxiv.org/pdf/2407.11005 
+https://huggingface.co/datasets/rungalileo/ragbench  (cc-by-4.0)
+
+hotpotqa 

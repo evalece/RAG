@@ -14,7 +14,7 @@
 <!-- ROADMAP -->
 ## Roadmap
 - [x] Define Project Roadmap 
-- [ ] Tool exploration 
+- [x] Tool exploration 
     - [ ] LLM model test 
     - [ ] Embedding 
     - [ ] Vector DB

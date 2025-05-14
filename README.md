@@ -2,9 +2,9 @@
 ![Last Commit](https://img.shields.io/github/last-commit/evalece/RAG)
 - [x] In-Development 
 
-### This project aims to implemnt retrieval of information as a trainable unit. In a transformer setting, input and queries/ or documents are processed in encoders where cross-attention helps identify the most relevant information. Decoders could be optimzed by training with cross-attention weights and weights on encoders as it generates output on masking. 
+ This project aims to implemnt retrieval of information as a trainable unit. In a transformer setting, input and queries/ or documents are processed in encoders where cross-attention helps identify the most relevant information. Decoders could be optimzed by training with cross-attention weights and weights on encoders as it generates output on masking. 
 
-### In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
+ In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
 
 
 

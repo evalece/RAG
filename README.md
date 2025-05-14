@@ -2,13 +2,13 @@
 ![Last Commit](https://img.shields.io/github/last-commit/evalece/RAG)
 - [x] In-Development 
 
-This project aims to implemnt retrieval of information as a trainable unit while enabling modularized decoder, tracking, and learing modules for latency optimization. 
+This project aims to implement retrieval of information as a trainable unit while enabling modularized decoder, tracking, and learning modules for latency optimization. 
  
-This is a sepculative RAG [1] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
+This is a speculative RAG [1] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
 
-While similar to Logit-base RAG in evaluating confidence [1], training set does not contain any generator output.
+While similar to Logit-based RAG in evaluating confidence [1], the training set does not contain any generator output.
 
-In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
+In our case, the final goal is to back propagate generation loss throughout the transformer model in a joint training [1].   
 
 
 
@@ -37,14 +37,14 @@ In our case, the final goal is to back propogate generation loss throughtout the
         - Implement Semantic Cache, reference GPTCache [1] 
         - Similar Approach: REALM by Google [1]
     - Observation of RAG during training and testing 
-        - Learning off means model do not learn from the operation for retrival 
-        -  (Learning off on generation+document sets*) Logit RAG in pipeline to produce model confidence on each retrival and response. 
+        - Learning off means model do not learn from the operation for retrieval 
+        -  (Learning off on generation+document sets*) Logit RAG in pipeline to produce model confidence on each retrieval and response. 
         - Store learning + toggle feature to run the model with and without learning on 
-            - retrival 
+            - retrieval 
             - decoder backprop (for later) 
         - Stat tracking (i.e., recall, precision, confidence etc )
     
-*In Logit-Based RAG, generator and retriver output gets map to a softmax tensor, representing probabilities. In our case, we do not wish to combine generator output to train RAG. -- check if confidence LLM exists, if not, calculating it.
+*In Logit-Based RAG, generator and retrieval output gets map to a softmax tensor, representing probabilities. In our case, we do not wish to combine generator output to train RAG. -- check if confidence LLM exists, if not, calculating it.
 
 
 ## Reference

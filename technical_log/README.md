@@ -123,7 +123,7 @@ I chat with chatGPT after reading https://aws.amazon.com/what-is/langchain/.
 
 
   # May 12: Setting RAG Benchmark tool (Debug of RAG)
-Tools 
+Tools (thought: this is semi-useful, well distributed datasets, GPT generated Q/As, similar to my co-op, but scoring is in question)
  - The Huggging Face
  - Hotpotqa (Featuring multi-hob questions that would require multiple domain search)
 
@@ -131,4 +131,33 @@ Description: AI-generated questions from various sources, see appendix 7.2: http
 https://arxiv.org/pdf/2407.11005 
 https://huggingface.co/datasets/rungalileo/ragbench  (cc-by-4.0)
 
-hotpotqa 
+
+Another one: 
+Evaluation + prototype RAG (dot product)
+https://docs.ragas.io/en/stable/getstarted/rag_eval/#evaluate 
+https://docs.ragas.io/en/stable/ 
+
+- I think implementation would significantly change the toolsets, so into implementation prototype tomorrow
+
+# May 13 RAG implementation
+- Start everything from here: https://arxiv.org/pdf/2402.19473 
+- Check long-context retrieval: https://arxiv.org/pdf/2406.15319 
+- Quantized influencer & AI judge in distillation & rethinking: https://arxiv.org/pdf/2402.17081 
+
+- A possible prototype: 
+    - Speculative RAG 
+        - Decoupled decoder in non-training usage for low latency. 
+        - Implement Semantic Cache, reference GPTCache [1] 
+        - Similar Approach: REALM by Google [1]
+    - Observation of RAG during training and testing 
+        - Learning off means model do not learn from the operation for retrival 
+        -  (Learning off on generation+document sets*) Logit RAG in pipeline to produce model confidence on each retrival and response. 
+        - Store learning + toggle feature to run the model with and without learning on 
+            - retrival 
+            - decoder backprop (for later) 
+        - Stat tracking (i.e., recall, precision, confidence etc )
+    
+*In Logit-Based RAG, generator and retriver output gets map to a softmax tensor, representing probabilities. In our case, we do not wish to combine generator output to train RAG. -- check if confidence LLM exists, if not, calculating it.
+
+- Reference 
+    - [1] P. Zhao et al., “Retrieval-Augmented Generation for AI-Generated Content: a survey,” arXiv.org, Feb. 29, 2024. https://arxiv.org/abs/2402.19473

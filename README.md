@@ -4,9 +4,9 @@
 
 This project aims to implement retrieval of information as a trainable unit while enabling modularized decoder, tracking, and learning modules for latency optimization. 
  
-This is a speculative RAG [1] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
+This is a speculative RAG [2] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
 
-While similar to Logit-based RAG in evaluating confidence [1], the training set does not contain any generator output.
+While similar to Logit-based RAG in evaluating confidence [2], the training set does not contain any generator output.
 
 In our case, the final goal is to back propagate generation loss throughout the transformer model in a joint training [1].   
 

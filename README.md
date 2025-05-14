@@ -27,19 +27,31 @@
 - [ ] Decoder into RAG to train encoders. 
 
 
+# Prototype Plan
 
+- A possible prototype: 
+    - Speculative RAG 
+        - Decoupled decoder in non-training usage for low latency. 
+        - Implement Semantic Cache, reference GPTCache [1] 
+        - Similar Approach: REALM by Google [1]
+    - Observation of RAG during training and testing 
+        - Learning off means model do not learn from the operation for retrival 
+        -  (Learning off on generation+document sets*) Logit RAG in pipeline to produce model confidence on each retrival and response. 
+        - Store learning + toggle feature to run the model with and without learning on 
+            - retrival 
+            - decoder backprop (for later) 
+        - Stat tracking (i.e., recall, precision, confidence etc )
+    
+*In Logit-Based RAG, generator and retriver output gets map to a softmax tensor, representing probabilities. In our case, we do not wish to combine generator output to train RAG. -- check if confidence LLM exists, if not, calculating it.
 
-## May 09- Kick Start on RAG
+- Reference 
 
-
-- Flow: Query + Document chunk -> Encoding (Sparse or Dense; cross-attention) -> Attention Score to calculate top relevant Document -> Decoder (selected Doc on masking) [1]
-- Simplied version for now by excluding parts not included in initial RAG:
-    - Document chunk -> Encoding (Sparse or Dense; cross-attention) -> Attention Score to calculate top relevant Document
-    - *** For later, a fully encoder-decoder RAG should propogate decoder loss back to encoder for weight trainings, but I will leave this feature for later. 
 
 
 - Reference 
   [1] F. Cuconasu et al., “The Power of Noise: Redefining retrieval for RAG systems,” Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 719–729, Jul. 2024, doi: 10.1145/3626772.3657834 https://dl.acm.org/doi/pdf/10.1145/3626772.3657834 .
+
+  [2] P. Zhao et al., “Retrieval-Augmented Generation for AI-Generated Content: a survey,” arXiv.org, Feb. 29, 2024. https://arxiv.org/abs/2402.19473
 ## Contributor
 
 <a href="https://github.com/evalece/RAG/graphs/contributors">

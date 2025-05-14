@@ -2,9 +2,13 @@
 ![Last Commit](https://img.shields.io/github/last-commit/evalece/RAG)
 - [x] In-Development 
 
- This project aims to implemnt retrieval of information as a trainable unit. In a transformer setting, input and queries/ or documents are processed in encoders where cross-attention helps identify the most relevant information. Decoders could be optimzed by training with cross-attention weights and weights on encoders as it generates output on masking. 
+This project aims to implemnt retrieval of information as a trainable unit while enabling modularized decoder, tracking, and learing modules for latency optimization. 
+ 
+This is a sepculative RAG [1] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
 
- In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
+While similar to Logit-base RAG in evaluating confidence [1], training set does not contain any generator output.
+
+In our case, the final goal is to back propogate generation loss throughtout the transformer model in a joint training [1].   
 
 
 
@@ -25,7 +29,7 @@
 - [ ] Decoder into RAG to train encoders. 
 
 
-# Prototype Plan
+## Prototype Plan
 
 - A possible prototype: 
     - Speculative RAG 

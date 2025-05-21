@@ -187,3 +187,11 @@ https://docs.ragas.io/en/stable/
 
  - Let's start by making a monitoring pipeline: 
  - Evaluation of upstream model that impacts downstream ones. (They can be injected with other values by Annotated) — but we can make an observation pipeline for the time being or see what LangGraph has to offer, otherwise, sampling Tool calling metrics within multinodal chain to present them in a graph databases by MVP submodule 
+
+ I continue to read through LangChain docs and pinned the following key ideas:
+ - 1. Spawn runnables - Runnable has defualt functions, they can spawn. There are some Python restrictions where "near parallel" is the best it can do https://python.langchain.com/docs/concepts/runnables/#runnableconfig 
+ - 2. Review asyncio ^ as a side note from point 1, for such workflow orchestration tools: Azure Data Factory, Luigi, Apache Airflow, Google Cloud Composer, Amazon CloudFormation, Dagster
+ - 3. InjectionState for LangGraph for metrics tracking:
+ (InjectionState: https://python.langchain.com/docs/concepts/tools/)
+ https://langchain-ai.github.io/langgraph/tutorials/rag/langgraph_agentic_rag/ 
+- 4. Adding Agent: https://langchain-ai.github.io/langgraph/tutorials/get-started/1-build-basic-chatbot/ 

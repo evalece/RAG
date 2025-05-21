@@ -22,3 +22,12 @@
     - Important: Use langchain-core == 0.2.19 and above to get LangChain Core for Tool calling message
 - 5. Use cases of tool calling 
     - Evaluation of Upstream model that impacts downstream ones. (They can be injected with other values by Annotated) — but we can make an observation pipeline for the time being or see what LangGraph has to offer, otherwise, sampling Tool calling metrics within multinodal chain to present them in a graph databases by MVP submodule 
+
+
+# GPT solution for WARNING: langchain 0.2.17 does not provide the extra 'google-vertexai'
+
+```bash
+pip install "pydantic<2.0"
+pip install langchain langchain-community
+
+```

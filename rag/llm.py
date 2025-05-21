@@ -6,7 +6,7 @@
 from langchain_community.llms import HuggingFacePipeline
 from transformers import pipeline
 
-hf_pipeline = pipeline("text-generation", model="gpt2")
+hf_pipeline = pipeline("text-generation", model="sshleifer/tiny-gpt2")
 llm = HuggingFacePipeline(pipeline=hf_pipeline)
 response = llm.invoke("Hello, world!")
 print(response)

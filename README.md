@@ -11,13 +11,15 @@ While similar to Logit-based RAG in evaluating confidence [2], the training set 
 In our case, the final goal is to back propagate generation loss throughout the transformer model in a joint training [1].   
 
 
-
+# May 21 and 22 - Reading of LangChain Doc (zzz to wow)
+- I discussed with ChatGPT 4o and it came up with the right word "LLM wrapper" — similar tools are LlamaIndex, Haystack, Semantic Kernel, CrewAI, Flowise etc. I choose LangChiain for job searching purpose
+- LangChain LLMs need $ to run, for this development, we will try choosing from The Hugging Face LLMs that supports LangChain APIs
 
 <!-- ROADMAP -->
 ## Roadmap
 - [x] Define Project Roadmap 
 - [x] Tool exploration 
-    - [ ] LLM model test 
+    - [x] LLM model test 
     - [ ] Embedding 
     - [ ] Vector DB
     - [ ] Benchmark & Baseline testing

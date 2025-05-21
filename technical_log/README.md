@@ -161,3 +161,29 @@ https://docs.ragas.io/en/stable/
 
 - Reference 
     - [1] P. Zhao et al., “Retrieval-Augmented Generation for AI-Generated Content: a survey,” arXiv.org, Feb. 29, 2024. https://arxiv.org/abs/2402.19473
+
+
+# May 19 Modularization on each search method and prototype evaluation goals
+
+- Summary
+    - Setting easier evaluation goals for RAG prototype 
+    - Re-design RAG with less required training to be replaced by a modularized Knowledge Graph [1] or other graph databases
+
+- Evaluation Method (Prototype)
+    - Inspired by "Your RAGs powered by Google Search technology, part 1" [2] on query expansion, given solution document, we may
+        - 1. Calculate embedding similarity on query expansion 
+        - 2. Calculate information graph similarity on retrival and solution (perphase propose a weighting to measure score)
+        - 2. Validate query expansion effectiveness without generating responses
+        - 3. The goal here is to ensure retrieval of accuracy instead of both generating correct response and retrieval of correct document
+        
+
+
+
+- Reference 
+ [1] https://cloud.google.com/blog/products/ai-machine-learning/rags-powered-by-google-search-technology-part-2
+ [2] https://cloud.google.com/blog/products/ai-machine-learning/rags-powered-by-google-search-technology-part-1
+
+ # May 20 LangChain Prototype on How RAG is doing
+
+ - Let's start by making a monitoring pipeline: 
+ - Evaluation of upstream model that impacts downstream ones. (They can be injected with other values by Annotated) — but we can make an observation pipeline for the time being or see what LangGraph has to offer, otherwise, sampling Tool calling metrics within multinodal chain to present them in a graph databases by MVP submodule 

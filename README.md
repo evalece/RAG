@@ -2,18 +2,14 @@
 ![Last Commit](https://img.shields.io/github/last-commit/evalece/RAG)
 - [x] In-Development 
 
-This project aims to implement retrieval of information as a trainable unit while enabling modularized decoder, tracking, and learning modules for latency optimization. 
- 
-This is a speculative RAG [2] with additional metrics to measure model confidence. It aims to leverage cache and document retrival with low latency when decoder training is disabled. 
-
-While similar to Logit-based RAG in evaluating confidence [2], the training set does not contain any generator output.
-
-In our case, the final goal is to back propagate generation loss throughout the transformer model in a joint training [1].   
-
-
-# May 21 and 22 - Reading of LangChain Doc (zzz to wow)
-- I discussed with ChatGPT 4o and it came up with the right word "LLM wrapper" — similar tools are LlamaIndex, Haystack, Semantic Kernel, CrewAI, Flowise etc. I choose LangChiain for job searching purpose
-- LangChain LLMs need $ to run, for this development, we will try choosing from The Hugging Face LLMs that supports LangChain APIs
+# May 24 - Readings and Pivots on this project
+- I read (actually, quickly scan through): ReAct, Facilitating Multu-Trun Function Calling For LLMs Via Compositional Institutution Tuning, LoRA, Understanding Zero-Shot and Few-Shot in LLMs
+- Thought: This project can focus on making LLM agent microservice-like:
+    - 1. Configurable in and outside of pipeline 
+    - 2. Runnable, test-able in and outside of pipeline 
+    - 3. Configuration allows for features mention in several papers (i.e., prompt, LLM, Transformer or other training modules, memory, few or zero-shot).
+    - 4. Monitoring, re-configuration, re-arrangement and benchmarking easy
+    - 5. (I haven't read this part) Considers GPU and other hardware optimization
 
 <!-- ROADMAP -->
 ## Roadmap

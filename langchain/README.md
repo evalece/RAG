@@ -71,6 +71,23 @@ Some module may need to rebuild instead e.g. with 'pybind11>=2.12'.
 `
 
 
+## Thoughts
+May 31
+Probably look into how to work with The Huggingface on training an embedding model for specific search. This may involve JAX and other hardard optimization, which may sound interesting but will eventually enlarge the project scope. 
+
+I saw the following skills being asked a lot, and are observed from several recent LLM and vector DB paper, I should also try 
+
+Remote servers for training or fine tuning transformers (i.e. like ReAct) 
+
+1. Colab (side: storage may be limited, if don't care on speed during pre-training, for example, few shots on small sets, then need checkpoints)
+2. GCP (has TPUs but free tier for 1 month only)
+^ (remember to always add sufficient shuffling to avoid covariant, dependent and etc related overfitting issues)
+
+1. JAX: XLA 
+2. Google T5 (TPU)
+3. SmoothQuant
+4. FlexGen (GPU offloading)
+
 [1] https://www.trychroma.com/ 
 [2] https://python.langchain.com/docs/integrations/vectorstores/ 
 [3] https://research.trychroma.com/evaluating-chunking?utm_source=chatgpt.com 

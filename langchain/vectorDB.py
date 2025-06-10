@@ -15,8 +15,11 @@ import os
 # Reference: https://python.langchain.com/docs/integrations/vectorstores/chroma/ 
 
 
-embedding_model= "sentence-transformers/all-MiniLM-L6-v2"
 
+
+class VectorDB():
+    def __init__(self):
+        self.embedding_model= "sentence-transformers/all-MiniLM-L6-v2"
 
 # Define the directory containing the text file and the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
